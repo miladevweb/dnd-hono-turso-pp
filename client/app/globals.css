@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+#card {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(30, 19, 57) rgb(220, 220, 220);
+  box-shadow: -15px 15px 15px #08070b8e;
+}
+
+#main {
+  display: grid;
+  padding: 25px 85px;
+  grid-template-columns: 1fr 1fr 450px;
+  grid-template-rows: 48vh 45vh;
+  gap: 10px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'basic-info basic-info card'
+    'biography biography biography';
+}
+
+#card-section {
+  grid-area: card;
+  justify-self: center;
+  width: 450px;
+}
+
+#basic-info {
+  grid-area: basic-info;
+}
+
+#biography {
+  grid-area: biography;
+}
